@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2025-11-16T00:00:00.000Z",
+  "title": "Design System: AMARENAS · Casona de Sabores",
+  "extensions": {
+    "colorMeta": {
+      "paper": { "role": "neutral", "displayName": "Papel Cálido", "canonical": "#f7f1e1", "tonalRamp": ["#d9d0b8", "#e3dbc5", "#ece4d1", "#f1e9d8", "#f7f1e1", "#faf6ec", "#fdfbf5", "#fffefb"] },
+      "ink": { "role": "neutral", "displayName": "Tinta Cálida", "canonical": "#241b0c", "tonalRamp": ["#120d05", "#1a1308", "#211a0c", "#2b2211", "#3a2f1a", "#4d4026", "#635336", "#7d6a49"] },
+      "leather-1": { "role": "neutral", "displayName": "Cuero Botella", "canonical": "#0c2417", "tonalRamp": ["#040f09", "#061712", "#0c2417", "#123a26", "#19503a", "#2a6a4e", "#4a8468", "#7fae92"] },
+      "gold": { "role": "primary", "displayName": "Oro Grabado", "canonical": "#c7a35c", "tonalRamp": ["#3d2f12", "#5c4719", "#7c5c26", "#9a7837", "#c7a35c", "#e0c687", "#eed9a4", "#f8edcf"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Grabado (Cinzel)", "purpose": "Marca, títulos de capítulo y rúbricas de carta." },
+      "body": { "displayName": "Mesa (EB Garamond)", "purpose": "Platos, precios, descripciones y textos de lectura." }
+    },
+    "shadows": [
+      { "name": "hover-glow-gold", "value": "0 6px 26px rgba(199,163,92,.28)", "purpose": "Resplandor cálido bajo el botón primario en hover: la única sombra del sistema." }
+    ],
+    "motion": [
+      { "name": "ease-stamp", "value": "power3.out", "purpose": "Entradas de títulos y elementos: estampado desde abajo." },
+      { "name": "ease-ui", "value": "cubic-bezier(0.16,1,0.3,1)", "purpose": "Transiciones de estados (hover, barra superior)." },
+      { "name": "duration-stamp", "value": "0.8–1s", "purpose": "Duración de las entradas estampadas." }
+    ],
+    "breakpoints": [
+      { "name": "phone", "value": "560px" },
+      { "name": "tablet", "value": "760px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botón primario (Explorar la carta)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "CTA de la tapa: recto, oro, tracking amplio; invierte en hover.",
+      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#carta\">Explorar la carta</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;padding:.95em 1.9em;border:1px solid #c7a35c;background:transparent;color:#eed9a4;font-family:Cinzel,serif;font-size:.82rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;text-decoration:none;transition:background .35s,color .35s,box-shadow .35s}.ds-btn-primary:hover,.ds-btn-primary:focus-visible{background:#c7a35c;color:#0a1d12;box-shadow:0 6px 26px rgba(199,163,92,.28)}"
+    },
+    {
+      "name": "Pestañas de capítulo",
+      "kind": "nav",
+      "refersTo": "topbar-tabs",
+      "description": "Segmento en la barra fija para alternar entre las dos cartas.",
+      "html": "<div class=\"ds-tabs\"><a class=\"ds-tab is-active\" href=\"#dia\">Desayuno &amp; Merienda</a><a class=\"ds-tab\" href=\"#noche\">Almuerzo &amp; Cena</a></div>",
+      "css": ".ds-tabs{display:flex;gap:2px;border:1px solid rgba(200,168,96,.45);border-radius:2px;overflow:hidden}.ds-tab{padding:.5em 1em;font-family:Cinzel,serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#6a5a33;text-decoration:none;white-space:nowrap}.ds-tab:hover{color:#123529}.ds-tab.is-active{background:#123529;color:#eed9a4}"
+    },
+    {
+      "name": "Fila de plato con puntos guía",
+      "kind": "custom",
+      "refersTo": "menu-item",
+      "description": "Nombre y precio unidos por filete de puntos; precio tabular a la derecha.",
+      "html": "<div class=\"ds-item\"><span class=\"ds-item-name\">Espresso</span><span class=\"ds-item-dots\" aria-hidden=\"true\"></span><span class=\"ds-item-price\">$2.000</span></div>",
+      "css": ".ds-item{display:flex;align-items:baseline;gap:10px;padding:.62em 0;border-bottom:1px solid rgba(154,120,55,.16);font-family:'EB Garamond',Georgia,serif}.ds-item-name{font-weight:500;font-size:1.1rem}.ds-item-dots{flex:1;min-width:14px;border-bottom:1px dotted rgba(154,120,55,.55);transform:translateY(-4px)}.ds-item-price{font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}"
+    },
+    {
+      "name": "Chip de salto rápido",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Navegación por categorías; píldora que se llena de cuero en hover.",
+      "html": "<a class=\"ds-chip\" href=\"#dia-cafeteria\">Cafetería</a>",
+      "css": ".ds-chip{display:inline-block;padding:.42em 1em;border:1px solid rgba(200,168,96,.45);border-radius:999px;background:transparent;font-family:Cinzel,serif;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#6a5a33;text-decoration:none;transition:all .3s}.ds-chip:hover,.ds-chip:focus-visible{border-color:#7c5c26;background:#123529;color:#eed9a4}"
+    },
+    {
+      "name": "Panel destacado (Brunch)",
+      "kind": "card",
+      "refersTo": "card-feature",
+      "description": "Hoja de cuero con remates de oro; lista de inclusiones en columnas.",
+      "html": "<div class=\"ds-feature\"><h4 class=\"ds-feature-name\">Brunch para compartir</h4><p class=\"ds-feature-price\">$50.000</p><ul class=\"ds-feature-list\"><li>Infusiones</li><li>Medialuna</li></ul></div>",
+      "css": ".ds-feature{position:relative;border:1px solid rgba(200,168,96,.45);background:radial-gradient(130% 100% at 50% 0%,#1c4b38 0%,transparent 60%),linear-gradient(165deg,#123529,#0a1d12 70%);color:#f7f1e1;padding:26px 30px;max-width:640px}.ds-feature::before{content:'';position:absolute;top:-1px;left:-1px;width:18px;height:18px;border-top:1px solid #c7a35c;border-left:1px solid #c7a35c}.ds-feature-name{margin:0;font-family:Cinzel,serif;font-size:1.2rem;letter-spacing:.16em;text-transform:uppercase;color:#eed9a4}.ds-feature-price{float:right;font-weight:600;font-variant-numeric:tabular-nums;font-size:1.4rem}.ds-feature-list{margin:1em 0 0;padding:0;list-style:none;columns:2}.ds-feature-list li{padding:.24em 0 .24em 16px;position:relative}.ds-feature-list li::before{content:'';position:absolute;left:0;top:.68em;width:5px;height:5px;transform:rotate(45deg);background:#c7a35c}"
+    }
+  ],
+  "narrative": {
+    "northStar": "La Carta de Cuero",
+    "overview": "AMARENAS se presenta como el objeto que ya conoce: la carta encuadernada de un gran comedor, cerrada en cuero verde botella y abierta sobre papel crema. Toda la página es esa carta: la portada ocupa la primera pantalla como una tapa con marco doble de oro y monograma; al bajar, la carta se abre en dos capítulos (Desayuno & Merienda, luego Almuerzo & Cena) unidos por el lomo del libro. La estética es VIP por materiales y por calma: nada brilla salvo el oro grabado, reservado a la marca, las rúbricas, los filetes de puntos y los precios tabulares. Mobile-first: en el teléfono se lee como una carta física de una sola columna con navegación de capítulos y salto rápido por sección.",
+    "keyCharacteristics": [
+      "Tapa/contratapa de cuero verde profundo con oro; interior de papel crema.",
+      "Tipografía grabada (Cinzel) para marca y rúbricas; serif de lectura (EB Garamond) para platos y precios.",
+      "Filetes de puntos clásicos entre plato y precio; precios tabulares alineados.",
+      "Oro escaso y puntual: líneas, gemas, bordes, estados activos.",
+      "Movimiento de estampado: letras y palabras entran desde abajo como tinta que se estampa.",
+      "Precios en pesos argentinos, formato fiel de la carta original."
+    ],
+    "rules": [
+      { "name": "La Regla del Oro Escaso", "body": "El oro es un metal precioso: líneas finas, pequeños rombos, estados activos y la marca. Un campo amplio de oro rompe la ilusión de grabado.", "section": "colors" },
+      { "name": "La Regla de las Dos Caras", "body": "Verde = cubierta; crema = hoja. Ninguna sección mezcla las dos caras en un mismo plano sin un borde de oro que actúe de canto.", "section": "colors" },
+      { "name": "La Regla de la Carta", "body": "Los nombres de plato y su precio comparten línea, unidos por puntos guía; el nombre nunca se separa de su precio si hay espacio.", "section": "typography" }
+    ],
+    "dos": [
+      "Usar el oro como metal escaso: líneas, gemas, activos, la marca — nunca como fondo de texto largo.",
+      "Mantener precios y nombres de plato fieles a la carta real, con cifras tabulares alineadas.",
+      "Entrar los títulos como estampado y respetar prefers-reduced-motion.",
+      "Respetar la jerarquía: AMARENAS en una sola línea en la tapa, capítulos con tracking amplio, rúbricas con rombo dorado.",
+      "Dejar más aire sobre cada título que debajo de él."
+    ],
+    "donts": [
+      "Inventar datos del local: dirección, horarios, teléfono e Instagram son placeholders hasta que el cliente los entregue.",
+      "Degradar S/P ni inventar precios donde la carta dice sin precio.",
+      "Usar el tagline como kicker sobre el H1; la marca manda y el tagline sigue.",
+      "Mezclar las dos caras en un plano sin un borde de oro que las separe.",
+      "Duplicar el tracking de un título al animarlo letra por letra."
+    ]
+  }
+}
