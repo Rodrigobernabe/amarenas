@@ -342,7 +342,49 @@
     });
   }
 
+  /* ----- popout modal de reseñas ----- */
+  function initReviewModal() {
+    var openBtn = document.getElementById("btn-open-review");
+    var modal = document.getElementById("modal-review");
+    var closeBtn = document.getElementById("btn-close-review");
+    if (!openBtn || !modal) return;
+
+    function openModal() {
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function closeModal() {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      if (openBtn) openBtn.focus();
+    }
+
+    openBtn.addEventListener("click", openModal);
+    if (closeBtn) {
+      closeBtn.addEventListener("click", closeModal);
+    }
+
+    /* cerrar al hacer clic en el backdrop exterior */
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    /* cerrar al presionar Escape */
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && modal.classList.contains("is-open")) {
+        closeModal();
+      }
+    });
+  }
+
   function init() {
+    initReviewModal();
     coverIntro();
     readingProgress();
     scrollReveals();

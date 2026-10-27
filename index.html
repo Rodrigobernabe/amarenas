@@ -132,7 +132,70 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </div>
 </section>
 
-<a href="https://wa.me/5492612345678" class="wa-float" target="_blank" aria-label="Contactar por WhatsApp" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span>WhatsApp</span></a>
+<!-- Botones Flotantes: Reseñas y WhatsApp -->
+<aside class="floating-actions" aria-label="Acciones rápidas">
+  <button type="button" class="float-btn float-btn--reviews" id="btn-open-review" aria-haspopup="dialog" aria-controls="modal-review" aria-label="Dejar una reseña en Google Maps">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+    </svg>
+    <span>Dejar reseña</span>
+  </button>
+  <a href="https://wa.me/5492612345678" class="float-btn float-btn--wa" target="_blank" aria-label="Contactar por WhatsApp" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span>WhatsApp</span>
+  </a>
+</aside>
+
+<!-- Modal Popout de Reseñas -->
+<div class="review-modal" id="modal-review" role="dialog" aria-modal="true" aria-labelledby="review-modal-title" aria-hidden="true">
+  <div class="review-modal__card">
+    <button type="button" class="review-modal__close" id="btn-close-review" aria-label="Cerrar ventana">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+      </svg>
+    </button>
+    <div class="review-modal__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" focusable="false">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      </svg>
+    </div>
+    <h3 class="review-modal__title" id="review-modal-title">¡Queremos conocer tu experiencia en Amarenas!</h3>
+    <p class="review-modal__intro">Tu opinión nos ayuda muchísimo a seguir creciendo y mejorando cada día.</p>
+    <p class="review-modal__lead">Si disfrutaste de tu visita, nos encantaría que nos dejaras una breve reseña contándonos:</p>
+    <ul class="review-modal__questions">
+      <li class="review-modal__question-item">
+        <span class="review-modal__question-icon" aria-hidden="true">
+          <!-- Taza de café -->
+          <svg viewBox="0 0 24 24"><path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM2 21h18v-2H2v2z"/></svg>
+        </span>
+        <span>¿Qué te pareció nuestro espacio?</span>
+      </li>
+      <li class="review-modal__question-item">
+        <span class="review-modal__question-icon" aria-hidden="true">
+          <!-- Corazón / atención -->
+          <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </span>
+        <span>¿Cómo fue la atención?</span>
+      </li>
+      <li class="review-modal__question-item">
+        <span class="review-modal__question-icon" aria-hidden="true">
+          <!-- Porción de torta / gastronomía -->
+          <svg viewBox="0 0 24 24"><path d="M12 6a2 2 0 100-4 2 2 0 000 4zm9 5.5l-9-4-9 4V20h18v-8.5zM12 9.5l6 2.67V14H6v-1.83l6-2.67zM6 18v-2h12v2H6z"/></svg>
+        </span>
+        <span>¿Qué te pareció la comida?</span>
+      </li>
+    </ul>
+    <p class="review-modal__footer-text">No hace falta que sea larga, unas pocas palabras son suficientes.<br><strong>¡Gracias por elegir Amarenas y ser parte de nuestra comunidad!</strong></p>
+    <a href="https://www.google.com/maps/search/?api=1&query=Amarenas+Cafe+%26+Brunch&query_place_id=ChIJfxZr7xJr0ZURImQbRMwE1hI" class="review-modal__cta" id="review-modal-link" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/>
+      </svg>
+      <span>Dejar mi reseña en Google Maps</span>
+    </a>
+  </div>
+</div>
 
 <footer class="footer">
   <div class="shell footer__inner">

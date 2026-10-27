@@ -52,14 +52,30 @@ window.MENU = {
       name: "Tentaciones",
       note: "Opciones varias, dulces y saladas.",
       items: [
-        { n: "Porción de torta (cheesecake, matilda, red, chocotorta)", p: "$9.500" },
-        { n: "Porción de torta (stock disponible)", p: "$7.500" },
+        {
+          n: "Porción de torta del día",
+          p: "$7.500",
+          d: "Selección de tortas disponibles según el stock."
+        },
+        {
+          n: "Porción de tortas especiales",
+          p: "$9.500",
+          d: "Matilda, Red Velvet, Cheesecake, Chocotorta, Choco-Oreo, Tiramisú, opción Sin TACC."
+        },
         { n: "Mafalda", p: "$3.800" },
         { n: "Croissant de jamón y queso", p: "$7.500" },
         { n: "Croissant relleno", p: "$6.000" },
         { n: "Croissant", p: "$3.000" },
-        { n: "Hot cakes", p: "$9.000" },
-        { n: "Waffles dulces", p: "$13.000" },
+        {
+          n: "Hot cakes",
+          p: "$9.000",
+          d: "Torre de tres hot cakes, cada capa está rellena con mantequilla de maní, acompañada de frutas de estación y crema chantilly. *Opcional proteico (masa hecha con avena)."
+        },
+        {
+          n: "Waffles",
+          p: "$13.000",
+          d: "Cuatro waffles en forma de triángulos acompañados de helado. *Opcional proteico (masa hecha con avena)."
+        },
         { n: "Cookie con topping", p: "$5.000" },
         { n: "Cookie simple", p: "$4.500" },
         { n: "Cuadrado de brownie", p: "$3.000" },
@@ -98,11 +114,11 @@ window.MENU = {
     },
     {
       slug: "para2",
-      name: "Para 2 personas",
+      name: "Combos para 2 personas",
       items: [
-        { n: "Infusión + 4 medialunas", p: "$8.500" },
-        { n: "Infusión + tostados grandes", p: "$10.000" },
-        { n: "Infusión + porción de torta y sándwich", p: "$17.000" }
+        { n: "2 Infusiones + 4 medialunas", p: "$8.500" },
+        { n: "2 Infusiones + tostados grande", p: "$10.000" },
+        { n: "2 Infusiones + porción de torta y sándwich", p: "$17.000" }
       ]
     }
   ],
