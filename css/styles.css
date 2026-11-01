@@ -1,4 +1,4 @@
-﻿/* =====================================================================
+/* =====================================================================
    AMARENAS · Casona de Sabores — Estilos
    Mundo: la carta de cuero (verde botella + oro grabado + papel crema)
    Mobile-first. Tokens arriba, layout abajo.
@@ -953,4 +953,48 @@ main > .shell{ padding-top:0; padding-bottom:0; }
     animation-iteration-count:1 !important;
     transition-duration:.001s !important;
   }
+}
+
+/* =====================================================================
+   RESPONSIVE COMPLEMENTARIO — mobile-first ajustes
+   ===================================================================== */
+
+/* --- Logo hero: sin desborde en pantallas muy pequeñas --- */
+@media (max-width:360px){
+  .cover__logo-img{ width:90vw; }
+}
+
+/* --- Grid de reservas: 1 columna en móvil, 2 en tablet, 4 en desktop --- */
+@media (max-width:479px){
+  .reservas__grid{ grid-template-columns:1fr; }
+  .card-info dd{ font-size:.98rem; }
+}
+@media (min-width:480px) and (max-width:759px){
+  .reservas__grid{ grid-template-columns:repeat(2,1fr); }
+}
+
+/* --- iFrame del mapa: alto proporcional en móvil --- */
+@media (max-width:480px){
+  .reservas iframe{ height:220px; }
+}
+
+/* --- Topbar: tabs no se cortan en pantallas medianas --- */
+@media (min-width:700px) and (max-width:900px){
+  .tab{ font-size:.64rem; padding:.5em .7em; letter-spacing:.08em; }
+  .topbar__brand{ font-size:.8rem; letter-spacing:.14em; }
+}
+
+/* --- Carta: items en pantallas muy angostas --- */
+@media (max-width:400px){
+  .item__row{ flex-wrap:wrap; gap:4px; }
+  .item__dots{ display:none; }
+  .item__price{ margin-left:auto; }
+  .item__name{ flex:1 1 100%; }
+}
+
+/* --- Feature (brunch compartido): layout en móvil --- */
+@media (max-width:480px){
+  .feature{ padding:20px 16px; }
+  .feature__head{ flex-direction:column; gap:4px; }
+  .feature__price{ margin-left:0; font-size:1.3rem; }
 }
