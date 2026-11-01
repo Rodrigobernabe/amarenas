@@ -1,4 +1,4 @@
-/* =====================================================================
+﻿/* =====================================================================
    AMARENAS · Casona de Sabores — Estilos
    Mundo: la carta de cuero (verde botella + oro grabado + papel crema)
    Mobile-first. Tokens arriba, layout abajo.
@@ -382,11 +382,15 @@ input,textarea,button,select,optgroup{ font:inherit; color:inherit; }
   margin:0 auto clamp(18px,3vh,32px);
   padding:0;
   line-height:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 .cover__logo-img{
   display:block;
   width:clamp(220px,55vw,520px);
   max-width:100%;
+  margin:0 auto;
   /* Invierte el negro a dorado/crema para que combine con el fondo oscuro */
   filter: invert(1) sepia(1) saturate(1.5) hue-rotate(5deg) brightness(1.1);
 }
@@ -864,6 +868,9 @@ main > .shell{ padding-top:0; padding-bottom:0; }
   font-size:clamp(1rem,3.6vw,1.12rem);
   color:rgba(238,217,164,.92);
 }
+/* Links en cards de información */
+.card-info dd a{color:rgba(238,217,164,.92);text-decoration:none;border-bottom:1px solid rgba(238,217,164,.35);transition:color .2s,border-color .2s;}
+.card-info dd a:hover{color:var(--gold-bright);border-color:var(--gold-bright);}
 .reservas__fine{
   margin:clamp(26px,4vh,40px) 0 0;
   font-family:var(--font-display);
