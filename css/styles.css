@@ -1,30 +1,40 @@
-/* =====================================================================
+﻿/* =====================================================================
    AMARENAS · Casona de Sabores — Estilos
-   Mundo: la carta de cuero (verde botella + oro grabado + papel crema)
+   Mundo: identidad de marca Amarenas (verde #1B4D3E + fondo claro #F9F9F9)
    Mobile-first. Tokens arriba, layout abajo.
    ===================================================================== */
 
 :root{
-  /* — papel interior — */
-  --paper:      #f7f1e1;
-  --paper-2:    #efe7d2;
-  --paper-edge: #e7dcc2;
-  --ink:        #241b0c;
-  --ink-soft:   #6a5a33;
-  /* — cuero (verde botella) — */
-  --leather-1:  #0c2417;
-  --leather-2:  #123529;
-  --leather-3:  #0a1d12;
-  --leather-glow:#1c4b38;
-  /* — oro grabado — */
-  --gold:       #c7a35c;
-  --gold-bright:#eed9a4;
-  --gold-deep:  #7c5c26;
-  --gold-ink:   rgba(154,120,55,.55);
-  --gold-hair:  rgba(200,168,96,.45);
+  /* — Colores de marca Amarenas — */
+  --brand-green:  #1B4D3E;
+  --brand-rose:   #1B4D3E;
+  --brand-bg:     #F9F9F9;
 
-  --font-display: "Cinzel", "Times New Roman", serif;
-  --font-body:    "EB Garamond", Georgia, serif;
+  /* — papel / fondo — */
+  --paper:      #F9F9F9;
+  --paper-2:    #f0eeec;
+  --paper-edge: #e2dfdb;
+
+  /* — tinta — */
+  --ink:        #1B4D3E;
+  --ink-soft:   #4a7a6a;
+
+  /* — verde (fondos, secciones oscuras) — */
+  --leather-1:  #1B4D3E;
+  --leather-2:  #234f40;
+  --leather-3:  #143c30;
+  --leather-glow:#2a6b54;
+
+  /* — acento verde claro (reemplaza dorado) — */
+  --gold:         #4a8c78;
+  --gold-bright:  #F9F9F9;
+  --gold-deep:    #1B4D3E;
+  --gold-ink:     rgba(27,77,62,.45);
+  --gold-hair:    rgba(27,77,62,.3);
+
+  /* — Fuentes de marca — */
+  --font-display: "Arapey", Georgia, serif;
+  --font-body:    "KoHo", system-ui, sans-serif;
 
   --shell: 1080px;
   --topbar-h: 62px;
@@ -391,8 +401,8 @@ input,textarea,button,select,optgroup{ font:inherit; color:inherit; }
   width:clamp(220px,55vw,520px);
   max-width:100%;
   margin:0 auto;
-  /* Invierte el negro a dorado/crema para que combine con el fondo oscuro */
-  filter: invert(1) sepia(1) saturate(1.5) hue-rotate(5deg) brightness(1.1);
+  /* En sección oscura (hero verde): invertir logo negro a blanco/crema */
+  filter: invert(1) brightness(1.05);
 }
 
 .cover__pre{
@@ -467,7 +477,7 @@ input,textarea,button,select,optgroup{ font:inherit; color:inherit; }
 .topbar{
   position:fixed; top:0; left:0; right:0; z-index:100;
   height:var(--topbar-h);
-  background:rgba(247,241,225,.97);
+  background:rgba(249,249,249,.97);
   -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
   border-bottom:1px solid var(--gold-hair);
   transform:translateY(-110%);
@@ -484,7 +494,7 @@ html.no-js .topbar{ transform:none; }
   font-family:var(--font-display);
   font-weight:600; font-size:.92rem;
   letter-spacing:.22em; text-transform:uppercase;
-  color:var(--leather-2);
+  color:var(--leather-1);
   text-decoration:none;
   white-space:nowrap;
 }
