@@ -377,7 +377,19 @@ input,textarea,button,select,optgroup{ font:inherit; color:inherit; }
 }
 .cover__inner{ position:relative; width:min(100%, 680px); }
 
-.crest{ color:var(--gold); margin:0 auto clamp(18px,3vh,30px); width:clamp(88px,20vw,120px); opacity:.95; }
+/* Logo oficial en el hero */
+.cover__logo{
+  margin:0 auto clamp(18px,3vh,32px);
+  padding:0;
+  line-height:1;
+}
+.cover__logo-img{
+  display:block;
+  width:clamp(220px,55vw,520px);
+  max-width:100%;
+  /* Invierte el negro a dorado/crema para que combine con el fondo oscuro */
+  filter: invert(1) sepia(1) saturate(1.5) hue-rotate(5deg) brightness(1.1);
+}
 
 .cover__pre{
   margin:clamp(10px,1.8vh,16px) 0 0;
