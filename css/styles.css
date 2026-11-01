@@ -1014,3 +1014,48 @@ main > .shell{ padding-top:0; padding-bottom:0; }
   .feature__head{ flex-direction:column; gap:4px; }
   .feature__price{ margin-left:0; font-size:1.3rem; }
 }
+
+/* Ilustración superior en el hero */
+.cover__crest{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:0 auto clamp(10px,2vh,20px);
+}
+.cover__crest-img{
+  display:block;
+  width:clamp(75px,16vw,120px);
+  height:auto;
+  max-width:100%;
+  margin:0 auto;
+  /* Invertir trazo a blanco/luminoso sobre el fondo verde */
+  filter:brightness(0) invert(1);
+  opacity:.92;
+}
+
+/* Divisor de secciones (reemplaza al rombo) */
+.divider__img{
+  display:inline-block;
+  vertical-align:middle;
+  width:clamp(45px,9vw,65px);
+  height:auto;
+  margin:0 clamp(10px,2vw,24px);
+  filter:brightness(0) invert(1);
+  opacity:.9;
+}
+
+/* Logo en el pie de página */
+.footer__logo-wrap{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:0 auto clamp(12px,2vh,20px);
+}
+.footer__logo-img{
+  display:block;
+  width:clamp(160px,38vw,260px);
+  height:auto;
+  margin:0 auto;
+  filter:invert(1) brightness(1.05);
+  opacity:.95;
+}
