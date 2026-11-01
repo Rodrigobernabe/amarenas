@@ -1015,33 +1015,36 @@ main > .shell{ padding-top:0; padding-bottom:0; }
   .feature__price{ margin-left:0; font-size:1.3rem; }
 }
 
-/* Ilustración superior en el hero */
+/* Ilustración superior en el hero: mismo ancho que el logo */
 .cover__crest{
   display:flex;
   justify-content:center;
   align-items:center;
-  margin:0 auto clamp(10px,2vh,20px);
+  margin:0 auto clamp(12px,2.5vh,24px);
+  width:clamp(220px,55vw,520px);
+  max-width:100%;
 }
 .cover__crest-img{
   display:block;
-  width:clamp(75px,16vw,120px);
+  width:100%;
   height:auto;
-  max-width:100%;
   margin:0 auto;
   /* Invertir trazo a blanco/luminoso sobre el fondo verde */
   filter:brightness(0) invert(1);
-  opacity:.92;
+  opacity:.95;
 }
 
-/* Divisor de secciones (reemplaza al rombo) */
+/* Divisor de secciones: ocupa casi todo el alto de la sección */
 .divider__img{
   display:inline-block;
   vertical-align:middle;
-  width:clamp(45px,9vw,65px);
-  height:auto;
-  margin:0 clamp(10px,2vw,24px);
+  width:auto;
+  height:clamp(120px,22vh,220px);
+  max-height:85%;
+  max-width:min(90vw,360px);
+  margin:0 clamp(10px,2.5vw,32px);
   filter:brightness(0) invert(1);
-  opacity:.9;
+  opacity:.95;
 }
 
 /* Logo en el pie de página */
