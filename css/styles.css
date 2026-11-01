@@ -7,7 +7,7 @@
 :root{
   /* — Colores de marca Amarenas — */
   --brand-green:  #1B4D3E;
-  --brand-rose:   #1B4D3E;
+  --brand-rose:   #eed5d9;
   --brand-bg:     #F9F9F9;
 
   /* — papel / fondo — */
@@ -70,9 +70,9 @@ body{
   display:inline-flex;
   align-items:center;
   gap:9px;
-  background:var(--leather-1);
-  color:var(--gold);
-  border:1px solid var(--gold-deep);
+  background:var(--brand-green);
+  color:#FFFFFF;
+  border:1px solid rgba(238,213,217,.35);
   padding:10px 16px;
   border-radius:50px;
   text-decoration:none;
@@ -86,22 +86,28 @@ body{
 .float-btn:hover{
   transform:translateY(-3px);
   box-shadow:0 12px 40px rgba(0,0,0,.48);
-  color:var(--gold-bright);
-  border-color:var(--gold);
+  color:#FFFFFF;
+  border-color:var(--brand-rose);
   background:var(--leather-2);
 }
 .float-btn svg{
   width:22px;
   height:22px;
-  fill:currentColor;
+  fill:var(--brand-rose);
+  color:var(--brand-rose);
   flex-shrink:0;
+  transition:transform .2s ease;
+}
+.float-btn:hover svg{
+  transform:scale(1.08);
 }
 .float-btn--reviews{
-  background:linear-gradient(145deg, var(--leather-2), var(--leather-3));
-  border-color:var(--gold);
+  background:var(--brand-green);
+  border-color:rgba(238,213,217,.35);
 }
 .float-btn--reviews svg{
-  color:var(--gold-bright);
+  fill:var(--brand-rose);
+  color:var(--brand-rose);
 }
 @media (max-width:540px){
   .floating-actions{ right:12px; bottom:16px; gap:8px; }
