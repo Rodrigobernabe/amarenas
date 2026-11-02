@@ -801,8 +801,8 @@ main > .shell{ padding-top:0; padding-bottom:0; }
    ===================================================================== */
 .divider{
   position:relative;
-  margin:clamp(48px,9vh,90px) 0;
-  padding:clamp(56px,10vh,110px) 24px;
+  margin:clamp(28px,5vh,54px) 0;
+  padding:clamp(24px,4.5vh,44px) 20px clamp(20px,4vh,36px);
   text-align:center;
   background:
     radial-gradient(120% 100% at 50% 0%, var(--leather-glow) 0%, transparent 55%),
@@ -810,8 +810,16 @@ main > .shell{ padding-top:0; padding-bottom:0; }
   color:var(--gold);
   overflow:hidden;
 }
+.divider__frame{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(10px,2vw,24px);
+  max-width:920px;
+  margin:0 auto;
+}
 .divider__word{
-  margin:clamp(14px,2.5vh,20px) 0 0;
+  margin:clamp(10px,1.8vh,16px) 0 0;
   font-family:var(--font-display);
   font-size:.68rem;
   letter-spacing:.5em; text-indent:.5em;
@@ -819,8 +827,9 @@ main > .shell{ padding-top:0; padding-bottom:0; }
   color:rgba(238,217,164,.9);
 }
 .divider__line{
-  display:inline-block; vertical-align:middle;
-  width:min(180px,30vw); height:1px;
+  flex:1 1 50px;
+  max-width:180px;
+  height:1px;
   background:linear-gradient(90deg, transparent, var(--gold));
 }
 .divider__line:last-child{ background:linear-gradient(90deg, var(--gold), transparent); }
@@ -1015,14 +1024,14 @@ main > .shell{ padding-top:0; padding-bottom:0; }
   .feature__price{ margin-left:0; font-size:1.3rem; }
 }
 
-/* Ilustración superior en el hero: mismo ancho que el logo */
+/* Ilustración superior en el hero */
 .cover__crest{
   display:flex;
   justify-content:center;
   align-items:center;
-  margin:0 auto clamp(12px,2.5vh,24px);
-  width:clamp(220px,55vw,520px);
-  max-width:100%;
+  margin:0 auto clamp(6px,1.2vh,12px);
+  width:clamp(160px,38vw,360px);
+  max-width:85%;
 }
 .cover__crest-img{
   display:block;
@@ -1034,15 +1043,14 @@ main > .shell{ padding-top:0; padding-bottom:0; }
   opacity:.95;
 }
 
-/* Divisor de secciones: ocupa casi todo el alto de la sección */
+/* Divisor de secciones: centrado y altura ajustada */
 .divider__img{
-  display:inline-block;
-  vertical-align:middle;
+  flex:0 0 auto;
+  display:block;
   width:auto;
-  height:clamp(120px,22vh,220px);
-  max-height:85%;
-  max-width:min(90vw,360px);
-  margin:0 clamp(10px,2.5vw,32px);
+  height:clamp(110px,18vh,175px);
+  max-width:min(70vw,260px);
+  margin:0;
   filter:brightness(0) invert(1);
   opacity:.95;
 }
@@ -1061,4 +1069,22 @@ main > .shell{ padding-top:0; padding-bottom:0; }
   margin:0 auto;
   filter:invert(1) brightness(1.05);
   opacity:.95;
+}
+/* Responsive refinado para el divisor en móviles angostos */
+@media (max-width:440px){
+  .divider__frame{
+    gap:8px;
+  }
+  .divider__line{
+    flex:1 1 20px;
+    max-width:50px;
+  }
+  .divider__img{
+    height:clamp(90px,16vh,130px);
+    max-width:75vw;
+  }
+  .divider__word{
+    font-size:.62rem;
+    letter-spacing:.35em;
+  }
 }
