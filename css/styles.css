@@ -923,6 +923,48 @@ main > .shell{ padding-top:0; padding-bottom:0; }
   border-radius:4px;
   box-shadow:0 12px 30px rgba(0,0,0,.4);
 }
+.reservas__actions{
+  margin-top:clamp(16px, 3vh, 26px);
+  display:flex;
+  justify-content:center;
+}
+.btn--map{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin-top:0;
+  background:var(--leather-2);
+  color:var(--brand-rose);
+  border:1px solid rgba(238,213,217,.4);
+  padding:12px 26px;
+  border-radius:50px;
+  font-family:var(--font-display);
+  font-size:.84rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  text-decoration:none;
+  box-shadow:0 8px 24px rgba(0,0,0,.35);
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease, color .2s ease;
+}
+.btn--map .btn__icon{
+  width:20px;
+  height:20px;
+  fill:var(--brand-rose);
+  flex-shrink:0;
+  transition:transform .2s ease;
+}
+.btn--map:hover{
+  background:var(--brand-green);
+  border-color:var(--brand-rose);
+  color:#FFFFFF;
+  transform:translateY(-2px);
+  box-shadow:0 12px 30px rgba(0,0,0,.48);
+}
+.btn--map:hover .btn__icon{
+  fill:#FFFFFF;
+  transform:scale(1.1);
+}
 
 /* =====================================================================
    PIE
