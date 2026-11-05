@@ -1,4 +1,4 @@
-/* =====================================================================
+﻿/* =====================================================================
    AMARENAS · Casona de Sabores — Datos de la carta
    ---------------------------------------------------------------------
    Para editar: cambiá los nombres, precios o listas de este archivo.
@@ -108,8 +108,8 @@ window.MENU = {
       kind: "combo",
       items: [
         { n: "CAMPO", p: "$7.500", d: "Tostadas con queso crema, mermelada, manteca y dulce de leche · infusión + jugo · bizcochitos." },
-        { n: "AMARENAS", p: "$19.000", d: "Porción de torta · cuadrado de brownie · chipá · ensalada de frutas · sándwich o croissant · 2 infusiones + jugo." },
-        { n: "NUTRITIVO", p: "$13.000", d: "Infusión con bowl de frutas de estación con yogurt y granola · tostadas de pan integral con palta, huevo, tomate y semillas." }
+        { n: "AMARENAS", p: "$19.000", d: "Porción de torta · cuadrado de brownie · ensalada de frutas · sándwich o croissant · 2 infusiones + jugo." },
+        { n: "NUTRITIVO", p: "$13.000", d: "Infusión más bowl de frutas de estación con yogurt y granola · tostadas de pan integral con palta, huevo, tomate y semillas." }
       ]
     },
     {
